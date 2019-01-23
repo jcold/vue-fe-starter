@@ -1,3 +1,3 @@
 <template>
-    <h1>About me?</h1>
+    <h1>ABOUT me?</h1>
 </template>

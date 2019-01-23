@@ -1,5 +1,4 @@
 import axios from 'axios'
-import {message} from 'ant-design-vue'
 import qs from 'qs'
 
 
@@ -40,7 +39,7 @@ instance.interceptors.response.use(function(response) {
         const cancelShowError = () => isShowError = false
         setTimeout(() => {
             if (isShowError) {
-                message.error(response.data.error, 8)
+                alert(response.data.error, 8)
             }
         })
         return Promise.reject({ ...response,
@@ -65,7 +64,7 @@ instance.interceptors.response.use(function(response) {
             } else if (error.message) {
                 msg = error.message
             }
-            message.error(msg, 8)
+            alert(msg, 8)
         }
     })
     return Promise.reject({ ...error,
